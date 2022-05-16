@@ -14,9 +14,9 @@
             <div class="consulting">
                 <p>Fusions &amp; acquisition</p>
                 <h1>Insurance Consulting</h1>
-                <input type="text" placeholder="name">
-                <input type="text" placeholder="email">
-                <input type="text" placeholder="phone">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Phone">
                 <select name="info" id="info">
                     <option selected value="More Info">More Info</option>
                 </select>
@@ -113,11 +113,13 @@ li:hover{
         p{
             font-size: 20px;
             color: $green-font;
+            margin: 0;
+            font-weight: 700;
         }
         h1{
             font-size: 85px;
-            font-weight: 700;
-            margin: 20px 0;
+            font-weight: 900;
+            margin-bottom: 20px;
         }
         input{
             width: 250px;
@@ -127,6 +129,7 @@ li:hover{
             border: 0;
             border-radius: 5px;
             padding: 0 15px;
+            font-size: 20px;
         }
         select{
             width: 250px;
@@ -136,6 +139,8 @@ li:hover{
             border: 0;
             border-radius: 5px;
             padding: 0 15px;
+            font-size: 20px;
+            color: #7B7575;
         }
         .btn{
             margin: 10px 10px;

@@ -29,13 +29,12 @@ export default {
 <style scoped lang="scss">
 @import '../styles/vars.scss';
 header{
-    height: 50px;
     background-color: $dark-blue-bg;
     color: $grey-font;
     font-size: 15px;
 }
 .infos{
-    height: 100%;
+    height: 50px;
     display: flex;
     align-content: center;
     justify-content: space-between;
