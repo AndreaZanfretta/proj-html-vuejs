@@ -90,20 +90,7 @@ li:hover{
     border-radius: 10px;
     color: white;
 }
-.btn{
-    background-color: $btn-green-bg;
-    width: 170px;
-    height: 40px;
-    line-height: 0;
 
-        a{
-            text-decoration: none;
-            color: white;
-            line-height: 25px;
-            font-size: 18px;
-            text-transform: uppercase;
-        }
-}
 .consulting{
     width: 55%;
     position: absolute;
