@@ -3,6 +3,7 @@ $fa-font-path: './webfonts';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '~@fortawesome/fontawesome-free/scss/solid.scss';
 @import '~@fortawesome/fontawesome-free/scss/regular.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
 
 /* generali */
 
@@ -10,6 +11,10 @@ $fa-font-path: './webfonts';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.container{
+    width: 60%;
+    margin: 0 auto;
 }
 ::-webkit-scrollbar {
     width: 10px;
