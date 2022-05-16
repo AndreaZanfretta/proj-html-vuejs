@@ -45,9 +45,33 @@
                 <div class="row row-card">
                     <div v-for="(card, index) in cards" :key="index" class="col-4">
                         <div  class="card">
+                            <i class="fa-solid fa-arrow-right"></i>
                             <i :class="card.icon"></i>
                             <h3>{{card.title}}</h3>
                             <p>{{card.subTitle}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="management">
+            <div class="row">
+                    <div class="col">
+                        <p>How it works in practice</p>
+                        <h2><span>Process</span> Management</h2>
+                        <p class="text">We work with innovative methodologies to ensure that the entire reformatting process is done from start to finish as planend</p>
+                    </div>
+            </div>
+            <div class="row-line">
+                <div class="line"></div>
+                <div class="wrapper">
+                    <div class="row">
+                        <div v-for="(numcard, index) in management" :key="index" class="col col-line">
+                            <div class="num-card">
+                                <p class="circle">{{numcard.n}}</p>
+                                <h3>{{numcard.title}}</h3>
+                                <p>{{numcard.subTitle}}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -92,6 +116,34 @@ export default {
                     title: 'Regulatory Risk',
                     subTitle: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
                 },
+            ],
+            management: [
+                {
+                    n: '01',
+                    title: 'Collection of information',
+                    subTitle: 'Lorem ipsum dolor, sit amet consectetur adipisicing',
+                },
+                {
+                    n: '02',
+                    title: 'Strategic planning',
+                    subTitle: 'Lorem ipsum dolor, sit amet consectetur adipisicing',
+                },
+                {
+                    n: '03',
+                    title: 'Assignment of responsabilities',
+                    subTitle: 'Lorem ipsum dolor, sit amet consectetur adipisicing',
+                },
+                {
+                    n: '04',
+                    title: 'Formatting process',
+                    subTitle: 'Lorem ipsum dolor, sit amet consectetur adipisicing',
+                },
+                {
+                    n: '05',
+                    title: 'Continuity formalization',
+                    subTitle: 'Lorem ipsum dolor, sit amet consectetur adipisicing',
+                },
+                
             ]
         }
     }
@@ -216,8 +268,91 @@ background-color: $main-green-bg;
         h3{
             padding: 15px 0;
         }
+        .fa-arrow-right{
+            font-size: 25px;
+            position: absolute;
+            top: 30px;
+            right: 35px;
+            color: $green-font;
+        }
 }
 
 }
 // Section 3 //
+#management{
+    .col{
+        text-align: center;
+        p{
+        color: $green-font;
+        font-size: 18px;
+        margin-bottom: 30px;
+        font-weight: 700;
+        }
+        h2{
+            font-size: 56px;
+            font-weight: 900;
+            margin: 0;
+            margin-bottom: 10px;
+                span{
+                    background-color: $ligthgreen-bg;
+                    color: $btn-green-bg;
+                    border-radius: 5px;
+                    padding: 0px 25px;
+                }
+        }
+        .text{
+            text-align: center;
+            color: $lightgrey-font;
+            font-size: 18px;
+            margin: 20px 0;
+            font-weight: 400;
+            padding: 0 560px;
+        }
+    }
+    .row{
+        width: 100%;
+        padding: 0;
+        padding-top: 90px;
+    }
+    .row-line{
+        position: relative;
+        padding-top: 0;
+        padding-bottom: 90px;
+            .line{
+                height: 5px;
+                position: absolute;
+                top: 105px;
+                left: 0;
+                right: 0;
+                color: $ligthgreen-bg;
+                background-color: $ligthgreen-bg;
+            }
+            .num-card{
+                top: -65px;
+                left: 100px;
+                text-align: center;
+                .circle{
+                    width: 40px;
+                    height: 40px;
+                    background-color: $ligthgreen-bg;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 40px;
+                    display: inline-block;
+                    color: $btn-green-bg;
+                }
+                h3{
+                    padding-bottom: 20px;
+                }
+                p{
+                    color: $lightgrey-font;
+                }
+            }
+    }
+    .wrapper{
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+    }
+}
 </style>
