@@ -10,6 +10,23 @@
                     <a href="#">Get in Touch</a>
                 </div>
             </div>
+
+            <div class="consulting">
+                <p>Fusions &amp; acquisition</p>
+                <h1>Insurance Consulting</h1>
+                <input type="text" placeholder="name">
+                <input type="text" placeholder="email">
+                <input type="text" placeholder="phone">
+                <select name="info" id="info">
+                    <option selected value="More Info">More Info</option>
+                </select>
+                <div class="btn">
+                    <a href="#">Get in Touch</a>
+                </div>
+                <div class="btn reverse">
+                    <a href="#">Read More</a>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -35,6 +52,11 @@ export default {
     background-image: url("../assets/bg-6.jpg");
     background-position: center;
     color: $black-font;
+
+        .container{
+            height: 100%;
+            position: relative;
+        }
 }
 .nav{
     width: 100%;
@@ -48,13 +70,13 @@ export default {
             height: 100%;
             img{
                 height: 100%;
-                width: 50%;
+                width: 45%;
             }
         }
 }
 ul{
     list-style: none;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 0;
         li{
             display: inline-block;
@@ -70,16 +92,60 @@ li:hover{
 }
 .btn{
     background-color: $btn-green-bg;
-    width: 160px;
-    height: 50px;
+    width: 170px;
+    height: 40px;
     line-height: 0;
 
         a{
             text-decoration: none;
             color: white;
-            line-height: 35px;
-            font-size: 20px;
+            line-height: 25px;
+            font-size: 18px;
             text-transform: uppercase;
+        }
+}
+.consulting{
+    width: 55%;
+    position: absolute;
+    top: 50%;
+    left: 54%;
+    transform: translate(0%, -50%);
+        p{
+            font-size: 20px;
+            color: $green-font;
+        }
+        h1{
+            font-size: 85px;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        input{
+            width: 250px;
+            height: 50px;
+            margin: 10px 5px;
+            background-color: $input-bg;
+            border: 0;
+            border-radius: 5px;
+            padding: 0 15px;
+        }
+        select{
+            width: 250px;
+            height: 50px;
+            margin: 10px 5px;
+            background-color: $input-bg;
+            border: 0;
+            border-radius: 5px;
+            padding: 0 15px;
+        }
+        .btn{
+            margin: 10px 10px;
+        }
+        .reverse{
+            background-color: transparent;
+            border: 1px solid $btn-green-bg;
+                a{
+                    color: $btn-green-bg;
+                }
         }
 }
 </style>
