@@ -519,6 +519,8 @@ background-color: $main-green-bg;
     width: 100%;
     .row{
     padding: 70px 0;
+    
+    
 }
 }
 
@@ -549,7 +551,7 @@ background-color: $main-green-bg;
         }
 }
 .row-team{
-    padding: 0;
+    padding-top: 0px!important;
 }
 .team-card{
     display: flex;
@@ -611,7 +613,6 @@ background-color: $main-green-bg;
             color: $lightgrey-font;
         }
         .cit{
-            padding-top: 40px;
             color: white;
         }
         .fa-quote-right{
