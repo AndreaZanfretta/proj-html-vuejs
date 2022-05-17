@@ -71,6 +71,11 @@ export default {
 #footer-top{
    background-color: $main-dark-bg;
    color: $lightgrey-font;
+   .reverse{
+       a{
+            color: white;
+       }
+   }
     .row{
         padding: 140px 0;
     }

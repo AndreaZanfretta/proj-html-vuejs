@@ -46,6 +46,7 @@ header{
     }
     .fa-brands{
         margin: 0 15px;
+        cursor: pointer;
     }
 }
 .fa-solid{

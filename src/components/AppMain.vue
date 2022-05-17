@@ -112,9 +112,9 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia numquam explicabo doloribus, a suscipit eveniet vero.</p>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ab et hic perferendis cum.</p>
                             <p v-if="cit === 'johnson'" class="cit">T.Johnson</p>
-                            <p v-if="cit === 'cooper'" class="cit">D.Cooper</p>
-                            <p v-if="cit === 'jones'" class="cit">O.Jones</p>
-                            <p v-if="cit === 'lopez'" class="cit">E.Lopez</p>
+                            <p v-if="cit === 'cooper'" class="cit">David Cooper</p>
+                            <p v-if="cit === 'jones'" class="cit">Oliver Jones</p>
+                            <p v-if="cit === 'lopez'" class="cit">Emma Lopez</p>
                             <i class="fa-solid fa-quote-right"></i>
                         </div>
                     </div>
@@ -403,6 +403,8 @@ background-color: $main-green-bg;
     background-color: white;
     padding: 40px 45px;
     margin-bottom: 25px;
+    transition: all 0.5s;
+    cursor: pointer;
 
         i{
             font-size: 40px;
@@ -412,12 +414,25 @@ background-color: $main-green-bg;
             padding: 15px 0;
         }
         .fa-arrow-right{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            line-height: 40px;
+            text-align: center;
             font-size: 25px;
             position: absolute;
             top: 30px;
             right: 35px;
             color: $green-font;
+            transition: all 0.5s;
         }
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.card:hover .fa-arrow-right{
+    background-color: $green-font;
+    color: white;
 }
 
 }
@@ -541,7 +556,7 @@ background-color: $main-green-bg;
     align-items: center;
     border-radius: 10px;
     padding: 0 10px;
-
+    cursor: pointer;
     img{
         width: 30%;
         border-radius: 10px;
