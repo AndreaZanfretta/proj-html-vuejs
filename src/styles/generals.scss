@@ -18,26 +18,33 @@ $fa-font-path: './webfonts';
     margin: 0 auto;
 }
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-  .btn{
-    background-color: $btn-green-bg;
-    width: 170px;
-    height: 40px;
-    line-height: 0;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.btn{
+  background-color: $btn-green-bg;
+  width: 170px;
+  height: 40px;
+  line-height: 0;
 
-        a{
-            text-decoration: none;
-            color: white;
-            line-height: 25px;
-            font-size: 18px;
-            text-transform: uppercase;
-        }
+      a{
+          text-decoration: none;
+          color: white;
+          line-height: 25px;
+          font-size: 18px;
+          text-transform: uppercase;
+      }
+}
+.reverse{
+  background-color: transparent;
+  border: 1px solid $btn-green-bg;
+      a{
+          color: $btn-green-bg;
+      }
 }
