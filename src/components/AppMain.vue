@@ -588,6 +588,9 @@ background-color: $main-green-bg;
             .fa-brands{
                 color: $green-font;
             }
+            .fa-brands:hover{
+                color: white;
+            }
     }
 }
 .team-card:hover{
