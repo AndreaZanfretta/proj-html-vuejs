@@ -611,6 +611,7 @@ background-color: $main-green-bg;
             color: $lightgrey-font;
         }
         .cit{
+            padding-top: 40px;
             color: white;
         }
         .fa-quote-right{
