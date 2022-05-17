@@ -152,6 +152,25 @@
                 </div>
             </div>
         </section>
+        <section id="newsletter">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col-6">
+                        <p>Newsletter</p>
+                        <h2><span>Know</span> First</h2>
+                        <p class="text">Follow closely and receive content about our company and the news pf the current market</p>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Email">
+                        <div class="btn">
+                            <a href="#">Subscribe</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </template>
 
@@ -253,10 +272,12 @@ export default {
 #network{
     background-color: $main-dark-bg;
     width: 100%;
+    .row{
+    padding: 150px 0;
+    padding-bottom: 150px;
 }
-.row{
-    padding: 90px 0;
 }
+
 .col-6{
     color: white;
         p{
@@ -359,7 +380,7 @@ background-color: $main-green-bg;
     margin-bottom: 25px;
 
         i{
-            font-size: 30px;
+            font-size: 40px;
             color: $green-font;
         }
         h3{
@@ -456,7 +477,11 @@ background-color: $main-green-bg;
 #team{
     background-color: $main-dark-bg;
     width: 100%;
+    .row{
+    padding: 70px 0;
 }
+}
+
 .col-9{
     color: white;
         p{
@@ -547,6 +572,14 @@ background-color: $main-green-bg;
         }
 }
 //Sezione 5//
+#news{
+    .btn{
+        width: 120px;
+        position: absolute;
+        bottom: 25px;
+        right: 0;
+    }
+}
 .col{
         position: relative;
         p{
@@ -581,12 +614,7 @@ background-color: $main-green-bg;
     padding: 0;
     padding-top: 100px;
     
-    .btn{
-        width: 120px;
-        position: absolute;
-        bottom: 25px;
-        right: 0;
-    }
+    
 }
 .img-box{
     border-radius: 10px;
@@ -619,6 +647,33 @@ background-color: $main-green-bg;
 }
 .row-news{
     padding-top: 40px;
-    padding-bottom: 90px;
+    padding-bottom: 140px;
+}
+//Sezione 6//
+#newsletter{
+    background-image: url(../assets/bg-1.jpg);
+    background-position: center;
+        .wrapper{
+            width: 50%;
+            margin: 0 auto;
+        }
+        .row{
+            padding-bottom: 90px;
+        }
+         input{
+            width: 400px;
+            height: 50px;
+            margin: 10px 5px;
+            background-color: $input-bg;
+            opacity: 0.6;
+            border: 0;
+            border-radius: 5px;
+            padding: 0 15px;
+            font-size: 20px;
+        }
+        .btn{
+            margin-top: 30px;
+        }
+        
 }
 </style>
