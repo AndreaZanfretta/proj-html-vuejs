@@ -87,7 +87,7 @@
                         They are fundamentals that become daily attitudes.</p>
                         <div class="row row-team">
                             <div v-for="(member, index) in team" :key="index" class="col-6">
-                                <div class="team-card">
+                                <div @click="swap(index)" class="team-card">
                                     <img :src="require('../' + member.img + '.jpg')" alt="">
                                     <div class="text">
                                         <h3>{{member.name}}</h3>
@@ -104,11 +104,17 @@
                     </div>
                     <div class="col-3">
                         <div class="box">
-                            <h3>President Speech</h3>
+                            <h3 v-if="role === 'president'">President Speech</h3>
+                            <h3 v-if="role === 'chief-marketing'">Chief Marketing</h3>
+                            <h3 v-if="role === 'chief-procurement'">Chief Procurement</h3>
+                            <h3 v-if="role === 'co-founder'">Co Founder</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium explicabo autem beatae quas ratione voluptates nihil, totam debitis itaque. Doloribus maxime ex aliquam</p>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia numquam explicabo doloribus, a suscipit eveniet vero.</p>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ab et hic perferendis cum.</p>
-                            <p class="cit">T.Johnson</p>
+                            <p v-if="cit === 'johnson'" class="cit">T.Johnson</p>
+                            <p v-if="cit === 'cooper'" class="cit">D.Cooper</p>
+                            <p v-if="cit === 'jones'" class="cit">O.Jones</p>
+                            <p v-if="cit === 'lopez'" class="cit">E.Lopez</p>
                             <i class="fa-solid fa-quote-right"></i>
                         </div>
                     </div>
@@ -179,6 +185,8 @@ export default {
     name: 'AppMain',
     data(){
         return{
+            role: "president",
+            cit: 'johnson',
             cards: [
                 {
                     icon: 'fa-solid fa-network-wired',
@@ -261,6 +269,23 @@ export default {
                     role: 'CEO & PRESIDENT'
                 },
             ]
+        }
+    },
+    methods: {
+        swap(index){
+            if(index === 0){
+                this.role = "co-founder";
+                this.cit = "cooper"
+            }else if(index === 1){
+                this.role = "chief-procurement";
+                this.cit = "jones";
+            }else if(index === 2){
+                this.role = "chief-marketing";
+                this.cit = "lopez";
+            }else{
+                this.role = "president";
+                this.cit = "johnson"
+            }
         }
     }
 }
@@ -514,6 +539,9 @@ background-color: $main-green-bg;
 .team-card{
     display: flex;
     align-items: center;
+    border-radius: 10px;
+    padding: 0 10px;
+
     img{
         width: 30%;
         border-radius: 10px;
@@ -540,11 +568,15 @@ background-color: $main-green-bg;
                 background-color: $dark-green-bg;
                 text-align: center;
                 line-height: 40px;
+                cursor: pointer;
             }
             .fa-brands{
                 color: $green-font;
             }
     }
+}
+.team-card:hover{
+    background-color: $green-font;
 }
 .box{
     background-color: $btn-green-bg;
@@ -625,6 +657,7 @@ background-color: $main-green-bg;
             width: 100%;
             object-fit: cover;
             border-radius: 10px;
+            transition: all 0.5s;
         }
         .overlay{
             position: absolute;
@@ -644,6 +677,9 @@ background-color: $main-green-bg;
             font-size: 30px;
             line-height: 30px;
         }
+}
+.img-box:hover img{
+    transform: scale(1.1);
 }
 .row-news{
     padding-top: 40px;
