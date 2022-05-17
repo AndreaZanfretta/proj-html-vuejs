@@ -115,6 +115,43 @@
                 </div>
             </div>
         </section>
+         <section id="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p>Our Editorial Content</p>
+                        <h2>Latest <span>News</span></h2>
+                        <p class="text">Every week we publish content about what is best in the business world.</p>
+                    </div>
+                    <div class="btn">
+                        <a href="#">See All</a>
+                    </div>
+                </div>
+                <div class="row row-news">
+                    <div class="col-4">
+                        <div class="img-box">
+                            <img src="../assets/news-1.jpg" alt="">
+                            <div class="overlay"></div>
+                            <p>Increasing Creativity is possible for everyone</p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="img-box">
+                            <img src="../assets/news-2.jpg" alt="">
+                            <div class="overlay"></div>
+                            <p>Because market research is part of the business plan</p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="img-box">
+                            <img src="../assets/news-3.jpg" alt="">
+                            <div class="overlay"></div>
+                            <p>Working from home is now a trend</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </template>
 
@@ -508,5 +545,80 @@ background-color: $main-green-bg;
             right: 40px;
             color: $dark-green-bg;
         }
+}
+//Sezione 5//
+.col{
+        position: relative;
+        p{
+        color: $green-font;
+        font-size: 18px;
+        margin-bottom: 30px;
+        font-weight: 700;
+        }
+        h2{
+            font-size: 56px;
+            font-weight: 900;
+            margin: 0;
+            margin-bottom: 10px;
+                span{
+                    background-color: $ligthgreen-bg;
+                    color: $btn-green-bg;
+                    border-radius: 5px;
+                    padding: 0px 25px;
+                }
+        }
+        .text{
+            color: $lightgrey-font;
+            font-size: 18px;
+            margin: 20px 0;
+            padding-right: 300px;
+            font-weight: 400;
+        }
+
+}
+.row{
+    position: relative;
+    padding: 0;
+    padding-top: 100px;
+    
+    .btn{
+        width: 120px;
+        position: absolute;
+        bottom: 25px;
+        right: 0;
+    }
+}
+.img-box{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+        img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.377);
+        }
+        p{
+
+            position: absolute;
+            bottom: 0;
+            left: 0px;
+            padding: 0 20px;
+            color: white;
+            font-size: 30px;
+            line-height: 30px;
+        }
+}
+.row-news{
+    padding-top: 40px;
+    padding-bottom: 90px;
 }
 </style>
