@@ -609,7 +609,7 @@ background-color: $main-green-bg;
         p{
 
             position: absolute;
-            bottom: 0;
+            bottom: 30px;
             left: 0px;
             padding: 0 20px;
             color: white;
