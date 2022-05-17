@@ -4,6 +4,7 @@ $fa-font-path: './webfonts';
 @import '~@fortawesome/fontawesome-free/scss/solid.scss';
 @import '~@fortawesome/fontawesome-free/scss/regular.scss';
 @import '~@fortawesome/fontawesome-free/scss/brands.scss';
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700;900&display=swap');
 @import './vars.scss';
 
 /* generali */
@@ -12,6 +13,7 @@ $fa-font-path: './webfonts';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
 }
 .container{
     width: 60%;
