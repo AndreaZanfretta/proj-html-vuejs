@@ -143,6 +143,7 @@ export default {
             margin: 0;
             span{
                 color: $btn-green-bg;
+                cursor: pointer;
             }
         }
     }
