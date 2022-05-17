@@ -77,6 +77,44 @@
                 </div>
             </div>
         </section>
+        <section id="team">
+            <div class="container">
+                <div class="row">
+                    <div class="col-9">
+                        <p>We like what we do</p>
+                        <h2><span>Team</span> of Experts</h2>
+                        <p class="text">Ethics and integrity are the bases on which our professionals build their careers.
+                        They are fundamentals that become daily attitudes.</p>
+                        <div class="row row-team">
+                            <div v-for="(member, index) in team" :key="index" class="col-6">
+                                <div class="team-card">
+                                    <img :src="require('../' + member.img + '.jpg')" alt="">
+                                    <div class="text">
+                                        <h3>{{member.name}}</h3>
+                                        <p>{{member.role}}</p>
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                        <i class="fa-brands fa-twitter"></i>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-3">
+                        <div class="box">
+                            <h3>President Speech</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium explicabo autem beatae quas ratione voluptates nihil, totam debitis itaque. Doloribus maxime ex aliquam</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia numquam explicabo doloribus, a suscipit eveniet vero.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ab et hic perferendis cum.</p>
+                            <p class="cit">T.Johnson</p>
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </template>
 
@@ -144,6 +182,28 @@ export default {
                     subTitle: 'Lorem ipsum dolor, sit amet consectetur adipisicing',
                 },
                 
+            ],
+            team: [
+                {
+                    img: 'assets/team-1',
+                    name: 'David Cooper',
+                    role: 'CTO & CO-FOUNDER'
+                },
+                {
+                    img: 'assets/team-3',
+                    name: 'Oliver Jones',
+                    role: 'CHIEF PROCUREMENT'
+                },
+                {
+                    img: 'assets/team-2',
+                    name: 'Emma Lopez',
+                    role: 'CHIEF MARKETING'
+                },
+                {
+                    img: 'assets/team-4',
+                    name: 'T. Johnson',
+                    role: 'CEO & PRESIDENT'
+                },
             ]
         }
     }
@@ -354,5 +414,99 @@ background-color: $main-green-bg;
         margin: 0 auto;
         position: relative;
     }
+}
+//Section4//
+#team{
+    background-color: $main-dark-bg;
+    width: 100%;
+}
+.col-9{
+    color: white;
+        p{
+            color: $green-font;
+            font-size: 18px;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        h2{
+            font-size: 56px;
+            font-weight: 900;
+            margin: 0;
+            margin-bottom: 10px;
+                span{
+                    background-color: $dark-green-bg;
+                    border-radius: 5px;
+                    padding: 0px 25px;
+                }
+        }
+        .text{
+            color: $lightgrey-font;
+            font-size: 18px;
+            margin: 20px 0;
+                font-weight: 400;
+        }
+}
+.row-team{
+    padding: 0;
+}
+.team-card{
+    display: flex;
+    align-items: center;
+    img{
+        width: 30%;
+        border-radius: 10px;
+        display: inline-block;
+        margin-right: 30px;
+        
+    }
+    .text{
+        display: inline-block;
+        margin: 20px 0;
+            h3{
+                color: white;
+            }
+            p{
+                margin: 20px 0;
+                color: $lightgrey-font;
+                font-size: 16px;
+            }
+            i{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin:0 5px;
+                background-color: $dark-green-bg;
+                text-align: center;
+                line-height: 40px;
+            }
+            .fa-brands{
+                color: $green-font;
+            }
+    }
+}
+.box{
+    background-color: $btn-green-bg;
+    margin-top: 80px;
+    width: 350px;
+    border-radius: 5px;
+    padding: 20px 35px;
+    position: relative;
+        h3{
+            color: white;
+            padding-bottom: 20px;
+        }
+        p{
+            color: $lightgrey-font;
+        }
+        .cit{
+            color: white;
+        }
+        .fa-quote-right{
+            position: absolute;
+            font-size: 30px;
+            bottom: 30px;
+            right: 40px;
+            color: $dark-green-bg;
+        }
 }
 </style>
