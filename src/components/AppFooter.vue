@@ -133,6 +133,9 @@ export default {
                         font-size: 22px;
                     }
                 }
+                li:hover{
+                    color: white;
+                }
             }
     }
     .navBox:hover{

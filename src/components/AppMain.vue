@@ -159,6 +159,7 @@
             </div>
         </section>
         <section id="newsletter">
+        <div class="overlay"></div>
             <div class="wrapper">
                 <div class="row">
                     <div class="col-6">
@@ -167,6 +168,7 @@
                         <p class="text">Follow closely and receive content about our company and the news pf the current market</p>
                     </div>
                     <div class="col-6">
+                        
                         <input type="text" placeholder="Name">
                         <input type="text" placeholder="Email">
                         <div class="btn">
@@ -559,6 +561,7 @@ background-color: $main-green-bg;
     border-radius: 10px;
     padding: 0 10px;
     cursor: pointer;
+    transition: all 0.5s;
     img{
         width: 30%;
         border-radius: 10px;
@@ -597,6 +600,7 @@ background-color: $main-green-bg;
 }
 .team-card:hover{
     background-color: $green-font;
+    transform: scale(1.1);
 }
 .box{
     background-color: $btn-green-bg;
@@ -673,6 +677,7 @@ background-color: $main-green-bg;
     position: relative;
     overflow: hidden;
     text-align: center;
+    cursor: pointer;
         img{
             width: 100%;
             object-fit: cover;
@@ -710,6 +715,7 @@ background-color: $main-green-bg;
     background-image: url(../assets/bg-1.jpg);
     background-position: center;
     background-attachment: fixed;
+    position: relative;
         .wrapper{
             width: 50%;
             margin: 0 auto;
@@ -730,6 +736,15 @@ background-color: $main-green-bg;
         }
         .btn{
             margin-top: 30px;
+            margin-left: 5px;
+        }
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.377);
         }
         
 }
