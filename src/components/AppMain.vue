@@ -709,6 +709,7 @@ background-color: $main-green-bg;
 #newsletter{
     background-image: url(../assets/bg-1.jpg);
     background-position: center;
+    background-attachment: fixed;
         .wrapper{
             width: 50%;
             margin: 0 auto;

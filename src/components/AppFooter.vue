@@ -115,6 +115,7 @@ export default {
         padding: 30px 20px;
         background-color: $footer-grey-bg;
         border-radius: 10px;
+        transition: all 0.5s;
             h4{
                 padding-left: 20px;
                 color: white;
@@ -133,6 +134,9 @@ export default {
                     }
                 }
             }
+    }
+    .navBox:hover{
+        transform: translateY(-1em);
     }
 }
 #footer-bottom{

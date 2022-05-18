@@ -4,8 +4,14 @@
             <div class="nav">
                 <div class="logo"><img src="../assets/nexgen-logo.svg" alt=""></div>
                 <ul class="links">
-                    <li v-for="(link, index) in navbar" :key="index">{{link}}</li>
+                    <li @click="drop(index)"  v-for="(link, index) in navbar" :key="index" :id="link">{{link}}</li>
                 </ul>
+                <div @mouseleave="dropleave" :class="drop1 ? 'show' : ''" class="drops abouts">
+                    <p v-for="(drop, index) in link.about" :key="index">{{drop}}</p>
+                </div>
+                <div @mouseleave="dropleave" :class="drop2 ? 'show' : ''" class="drops service">
+                    <p v-for="(drop, index) in link.services" :key="index">{{drop}}</p>
+                </div>
                 <div class="btn">
                     <a href="#">Get in Touch</a>
                 </div>
@@ -39,6 +45,41 @@ export default {
         return{
             navbar: ["Home", "About", "Services", "Process", "Team", "Blog"],
             link: links,
+            drop1: false,
+            drop2: false,
+        }
+    },
+    methods: {
+        drop(index){
+            let drop1 = this.drop1;
+            let drop2 = this.drop2;
+            if(drop1 === false){
+                if(index === 1){
+                this.drop1 = true;
+                this.drop2 = false;
+                }
+            }else{
+                if(index === 1){
+                this.drop1 = false;
+                this.drop2 = false;
+                }
+            }
+            if(drop2 === false){
+                if(index === 2){
+                this.drop2 = true;
+                this.drop1 = false;
+                }
+            }else{
+                if(index === 2){
+                this.drop2 = false;
+                this.drop1 = false;
+                }
+            }
+
+        },
+        dropleave(){
+            this.drop1 = false;
+            this.drop2 = false;
         }
     }
 }
@@ -65,6 +106,7 @@ export default {
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
+    position: relative;
 
         .logo{
             height: 100%;
@@ -73,7 +115,37 @@ export default {
                 width: 45%;
             }
         }
+        .drops{
+            width: 135px;
+            position: absolute;
+            top: 64px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid $green-font;
+            display: none;
+                p{
+                    margin-bottom: 0;
+                    cursor: pointer;
+                    padding: 10px 0;
+                }
+                p:hover{
+                    background-color: #b4b4b4;
+                }
+
+        }
+        .abouts{
+            left: 415px;
+        }
+        .service{
+            left: 520px;
+        }
 }
+.show{
+    display: block!important;
+    z-index: 10000;
+}
+
 ul{
     list-style: none;
     font-size: 18px;
@@ -84,7 +156,16 @@ ul{
             text-transform: uppercase;
             cursor: pointer;
         }
+        #About::after{
+            font: var(--fa-font-solid);
+            content: "\f107";
+        }
+        #Services::after{
+            font: var(--fa-font-solid);
+            content: "\f107";
+        }
 }
+
 li:hover{
     background-color: $btn-green-bg;
     border-radius: 10px;
