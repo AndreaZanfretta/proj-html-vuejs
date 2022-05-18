@@ -134,7 +134,7 @@ export default {
                     }
                 }
                 li:hover{
-                    color: white;
+                    color: $green-font;
                 }
             }
     }

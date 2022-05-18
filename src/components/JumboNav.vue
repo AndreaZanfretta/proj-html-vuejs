@@ -24,7 +24,11 @@
                 <input type="text" placeholder="Email">
                 <input type="text" placeholder="Phone">
                 <select name="info" id="info">
-                    <option selected value="More Info">More Info</option>
+                    <option selected disabled value="---">---</option>
+                    <option value="Sales">Sales and Purchasing</option>
+                    <option value="Financial">Financial and Accounts</option>
+                    <option value="Human">Human Resource</option>
+                    <option value="Another">Another subject</option>
                 </select>
                 <div class="btn">
                     <a href="#">Get in Touch</a>
@@ -124,6 +128,7 @@ export default {
             text-align: center;
             border: 1px solid $green-font;
             display: none;
+            transition: all 0.5s;
                 p{
                     margin-bottom: 0;
                     cursor: pointer;
@@ -135,15 +140,20 @@ export default {
 
         }
         .abouts{
-            left: 415px;
+            left: 407px;
         }
         .service{
-            left: 520px;
+            left: 527px;
         }
 }
 .show{
     display: block!important;
     z-index: 10000;
+    animation: fade 0.8s forwards;
+}
+@keyframes fade {
+    0%{opacity: 0}
+    100%{opacity: 1}
 }
 
 ul{
